@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="黑龙江省获客农业科技股份有限公司 —— 专注农业社会化服务、农业培训、统防统治、一喷多促等政府项目,打造数字化农药平台,涵盖植保药剂与种业全产业链。">
+  <meta name="keywords" content="农业社会化服务,统防统治,一喷多促,农药平台,植保药剂,种业,农业培训,黑龙江,获客农业">
+  <title>黑龙江省获客农业科技股份有限公司 | 科技赋能农业 · 服务惠及三农</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>
+/* =========================================================
+   获客农业 · 企业官网样式
+   配色：农业绿(主) + 丰收金(辅) + 科技蓝(点缀)
+   ========================================================= */
+
+:root{
+  --green-900:#0c4a26;
+  --green-800:#0f5028;
+  --green-700:#15703a;
+  --green-600:#1d8047;
+  --green-500:#2d9a59;
+  --green-300:#7fc98f;
+  --green-100:#e7f5ec;
+  --green-50:#f3faf5;
+
+  --gold-600:#d99a16;
+  --gold-500:#f0b429;
+  --gold-100:#fdf3da;
+
+  --blue-600:#0a5ca8;
+  --blue-500:#1670c4;
+  --blue-100:#e4f0fb;
+
+  --ink-900:#16261c;
+  --ink-700:#33473a;
+  --ink-500:#5d6f63;
+  --ink-300:#9aa79f;
+
+  --line:#e4ebe6;
+  --bg:#ffffff;
+  --bg-soft:#f5f9f6;
+
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow-sm:0 2px 10px rgba(18,60,34,.06);
+  --shadow:0 14px 40px rgba(18,60,34,.10);
+  --shadow-lg:0 24px 60px rgba(18,60,34,.16);
+
+  --maxw:1200px;
+  --font:"PingFang SC","Microsoft YaHei","Noto Sans SC","Hiragino Sans GB",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);
+  color:var(--ink-700);
+  background:var(--bg);
+  line-height:1.7;
+  font-size:16px;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{color:var(--ink-900);line-height:1.25;font-weight:800}
+ul{list-style:none}
+
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* ---------- 按钮 ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 28px;border-radius:50px;font-weight:700;font-size:15px;
+  cursor:pointer;border:none;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  white-space:nowrap;
+}
+.btn--primary{background:linear-gradient(135deg,var(--green-600),var(--green-800));color:#fff;box-shadow:0 8px 22px rgba(21,112,58,.32)}
+.btn--primary:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(21,112,58,.42)}
+.btn--ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7)}
+.btn--ghost:hover{background:rgba(255,255,255,.16);transform:translateY(-3px)}
+.btn--light{background:#fff;color:var(--green-700)}
+.btn--light:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.btn--block{width:100%}
+
+/* ---------- 顶部公告条 ---------- */
+.topbar{background:var(--green-900);color:#d7ecdd;font-size:13px}
+.topbar__inner{display:flex;align-items:center;gap:10px;height:38px;flex-wrap:wrap;overflow:hidden}
+.topbar__sep{opacity:.4}
+.topbar__spacer{flex:1}
+.topbar__item--hl{color:var(--gold-500);font-weight:700}
+
+/* ---------- 导航 ---------- */
+.header{
+  position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(160%) blur(12px);
+  border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s;
+}
+.header.is-scrolled{box-shadow:var(--shadow-sm);border-color:var(--line)}
+.header__inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+
+.brand{display:flex;align-items:center;gap:12px}
+.brand__mark{display:grid;place-items:center;filter:drop-shadow(0 4px 8px rgba(21,112,58,.25))}
+.brand__text strong{display:block;font-size:20px;color:var(--green-800);letter-spacing:.5px;line-height:1.1}
+.brand__text small{display:block;font-size:10px;letter-spacing:2px;color:var(--ink-300);font-weight:600}
+
+.nav{display:flex;align-items:center;gap:6px}
+.nav__link{
+  position:relative;padding:8px 14px;font-size:15px;font-weight:600;color:var(--ink-700);
+  border-radius:8px;transition:color .2s,background .2s;
+}
+.nav__link::after{
+  content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;
+  background:var(--green-600);transform:scaleX(0);transform-origin:left;transition:transform .25s;
+}
+.nav__link:hover{color:var(--green-700)}
+.nav__link:hover::after,.nav__link.is-active::after{transform:scaleX(1)}
+.nav__link.is-active{color:var(--green-700)}
+.nav__btn{
+  margin-left:8px;padding:10px 22px;border-radius:50px;font-size:15px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--green-600),var(--green-800));
+  box-shadow:0 6px 16px rgba(21,112,58,.28);transition:transform .25s,box-shadow .25s;
+}
+.nav__btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(21,112,58,.4)}
+
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-toggle span{width:24px;height:2.5px;background:var(--green-800);border-radius:2px;transition:.3s}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#f0f8f2 0%,#e3f3e8 55%,#d8eede 100%)}
+.hero__bg{position:absolute;inset:0;z-index:0}
+.hero__field{
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 80% 20%,rgba(240,180,41,.16),transparent 45%),
+    radial-gradient(circle at 15% 80%,rgba(45,154,89,.18),transparent 50%);
+}
+.hero__field::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:42%;
+  background:
+    repeating-linear-gradient(100deg,rgba(21,112,58,.10) 0 2px,transparent 2px 26px),
+    linear-gradient(0deg,rgba(127,201,143,.35),transparent);
+  transform:skewY(-3deg);transform-origin:bottom;mask-image:linear-gradient(0deg,#000,transparent);
+}
+.hero__art{position:absolute;top:0;right:0;width:55%;height:100%;opacity:.9}
+.drone{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+.hero__inner{position:relative;z-index:2;padding:84px 24px 130px}
+.hero__content{max-width:680px}
+.hero__badge{
+  display:inline-block;padding:7px 16px;border-radius:50px;font-size:13px;font-weight:700;
+  color:var(--green-700);background:rgba(255,255,255,.7);border:1px solid var(--green-300);
+  box-shadow:var(--shadow-sm);margin-bottom:22px;
+}
+.hero__title{font-size:clamp(34px,5.4vw,62px);letter-spacing:.5px;margin-bottom:22px}
+.hero__title-hl{
+  background:linear-gradient(120deg,var(--green-700),var(--gold-600));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero__desc{font-size:clamp(15px,1.7vw,18px);color:var(--ink-700);max-width:600px;margin-bottom:30px}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero__actions .btn--ghost{color:var(--green-800);border-color:var(--green-600)}
+.hero__actions .btn--ghost:hover{background:rgba(21,112,58,.08)}
+
+.hero__stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px;max-width:620px}
+.stat{background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:var(--radius-sm);padding:16px 14px;box-shadow:var(--shadow-sm)}
+.stat__num{display:block;font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--green-700);line-height:1}
+.stat__label{display:block;font-size:13px;color:var(--ink-500);margin-top:6px}
+
+.hero__wave{position:absolute;left:0;right:0;bottom:-1px;z-index:1;line-height:0}
+.hero__wave svg{width:100%;height:70px}
+
+/* ---------- 信任栏 ---------- */
+.trust{padding:34px 0;border-bottom:1px solid var(--line);background:#fff}
+.trust__inner{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:space-between}
+.trust__lead{font-size:14px;color:var(--ink-500);font-weight:600}
+.trust__logos{display:flex;gap:14px;flex-wrap:wrap}
+.trust__logo{
+  padding:8px 18px;border:1px solid var(--line);border-radius:50px;font-weight:700;
+  font-size:14px;color:var(--ink-500);background:var(--bg-soft);transition:.25s;
+}
+.trust__logo:hover{color:var(--green-700);border-color:var(--green-300);background:var(--green-50)}
+
+/* ---------- 通用 section ---------- */
+.section{padding:92px 0}
+.section__head{text-align:center;max-width:720px;margin:0 auto 56px}
+.section__eyebrow{
+  display:inline-block;font-size:13px;font-weight:800;letter-spacing:2px;color:var(--green-600);
+  text-transform:uppercase;margin-bottom:14px;
+}
+.section__eyebrow--light{color:var(--green-300)}
+.section__title{font-size:clamp(26px,3.6vw,40px);margin-bottom:14px}
+.section__title--light{color:#fff}
+.section__sub{font-size:16px;color:var(--ink-500)}
+.section__sub--light{color:rgba(255,255,255,.78)}
+
+.grid{display:grid;gap:24px}
+.grid--services{grid-template-columns:repeat(3,1fr)}
+.grid--gov{grid-template-columns:repeat(3,1fr)}
+.grid--products{grid-template-columns:repeat(4,1fr)}
+.grid--news{grid-template-columns:repeat(3,1fr)}
+
+/* ---------- 业务卡片 ---------- */
+.services{background:var(--bg-soft)}
+.scard{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;
+  transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden;
+}
+.scard::before{
+  content:"";position:absolute;top:0;left:0;width:100%;height:4px;
+  background:linear-gradient(90deg,var(--green-500),var(--gold-500));transform:scaleX(0);
+  transform-origin:left;transition:transform .35s;
+}
+.scard:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:transparent}
+.scard:hover::before{transform:scaleX(1)}
+.scard__icon{
+  width:60px;height:60px;border-radius:16px;display:grid;place-items:center;color:#fff;margin-bottom:20px;
+}
+.scard__icon--green{background:linear-gradient(135deg,var(--green-500),var(--green-700))}
+.scard__icon--blue{background:linear-gradient(135deg,var(--blue-500),var(--blue-600))}
+.scard__icon--gold{background:linear-gradient(135deg,var(--gold-500),var(--gold-600))}
+.scard__title{font-size:20px;margin-bottom:10px}
+.scard__text{font-size:15px;color:var(--ink-500)}
+
+/* ---------- 政府项目 ---------- */
+.gov{
+  background:linear-gradient(160deg,var(--green-800),var(--green-900));position:relative;overflow:hidden;
+}
+.gov::before{
+  content:"";position:absolute;inset:0;opacity:.5;
+  background:radial-gradient(circle at 85% 15%,rgba(240,180,41,.18),transparent 40%),
+            radial-gradient(circle at 10% 90%,rgba(45,154,89,.3),transparent 45%);
+}
+.gov .container{position:relative;z-index:2}
+.govcard{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);
+  padding:32px 28px;backdrop-filter:blur(4px);transition:transform .3s,background .3s;
+}
+.govcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+.govcard__tag{
+  display:inline-block;padding:5px 14px;border-radius:50px;font-size:12px;font-weight:800;
+  background:var(--gold-500);color:var(--green-900);margin-bottom:16px;
+}
+.govcard__title{color:#fff;font-size:19px;margin-bottom:12px}
+.govcard__text{color:rgba(255,255,255,.78);font-size:14.5px;margin-bottom:16px}
+.govcard__list li{
+  color:rgba(255,255,255,.9);font-size:13.5px;padding-left:22px;position:relative;margin-bottom:6px;
+}
+.govcard__list li::before{content:"✓";position:absolute;left:0;color:var(--gold-500);font-weight:900}
+
+/* ---------- 平台 ---------- */
+.platform__inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.platform__desc{font-size:16px;color:var(--ink-500);margin:18px 0 24px}
+.feature-list{margin-bottom:30px}
+.feature-list li{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px}
+.feature-list__dot{
+  flex:0 0 auto;width:22px;height:22px;border-radius:50%;margin-top:3px;
+  background:radial-gradient(circle,#fff 30%,var(--green-500) 32%);
+  box-shadow:0 0 0 3px var(--green-100);
+}
+.feature-list strong{display:block;color:var(--ink-900);font-size:15.5px}
+.feature-list div{font-size:14.5px;color:var(--ink-500)}
+
+.mockup{
+  background:#fff;border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden;
+  border:1px solid var(--line);transform:perspective(1200px) rotateY(-6deg) rotateX(2deg);
+  transition:transform .5s;
+}
+.mockup:hover{transform:perspective(1200px) rotateY(0) rotateX(0)}
+.mockup__bar{display:flex;gap:7px;padding:13px 16px;background:var(--bg-soft);border-bottom:1px solid var(--line)}
+.mockup__bar span{width:11px;height:11px;border-radius:50%;background:#d7ddd9}
+.mockup__bar span:nth-child(1){background:#ff5f57}
+.mockup__bar span:nth-child(2){background:#febc2e}
+.mockup__bar span:nth-child(3){background:#28c840}
+.mockup__screen{padding:22px;background:linear-gradient(180deg,#fff,var(--green-50))}
+.mockup__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.mockup__logo{font-weight:800;color:var(--green-700);font-size:16px}
+.mockup__pill{font-size:11px;font-weight:700;color:#fff;background:var(--green-600);padding:4px 11px;border-radius:50px}
+.mockup__row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.mockup__tile{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 6px;text-align:center;
+  font-size:12.5px;font-weight:700;color:var(--green-700);box-shadow:var(--shadow-sm);
+}
+.mockup__chart{display:flex;align-items:flex-end;gap:10px;height:120px;padding:14px;background:#fff;border-radius:12px;box-shadow:var(--shadow-sm)}
+.mockup__chart span{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,var(--green-400,#3aa75f),var(--green-600));animation:grow 1.2s ease}
+@keyframes grow{from{height:0!important}}
+.mockup__note{margin-top:14px;font-size:13px;color:var(--ink-500);text-align:center}
+.mockup__note strong{color:var(--gold-600)}
+
+/* ---------- 产品卡片 ---------- */
+.products{background:var(--bg-soft)}
+.pcard{background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.pcard:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.pcard__cover{height:150px;display:grid;place-items:center;position:relative}
+.pcard__cover span{
+  font-size:18px;font-weight:800;color:#fff;letter-spacing:2px;
+  background:rgba(0,0,0,.18);padding:6px 16px;border-radius:50px;backdrop-filter:blur(2px);
+}
+.pcard__cover--1{background:linear-gradient(135deg,#2d9a59,#0f5028)}
+.pcard__cover--2{background:linear-gradient(135deg,#f0b429,#d99a16)}
+.pcard__cover--3{background:linear-gradient(135deg,#1670c4,#0a5ca8)}
+.pcard__cover--4{background:linear-gradient(135deg,#5d6f63,#16261c)}
+.pcard__body{padding:22px}
+.pcard__body h3{font-size:18px;margin-bottom:8px}
+.pcard__body p{font-size:14px;color:var(--ink-500)}
+
+/* ---------- 关于我们 ---------- */
+.about__inner{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.about__text{font-size:15.5px;color:var(--ink-500);margin-bottom:16px}
+.about__values{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+.value{display:flex;gap:16px;align-items:baseline;padding:14px 18px;background:var(--green-50);border-radius:var(--radius-sm);border-left:3px solid var(--green-500)}
+.value strong{color:var(--green-700);font-size:15px;flex:0 0 56px}
+.value span{color:var(--ink-700);font-size:15px}
+
+.about__panel{
+  background:linear-gradient(160deg,var(--green-700),var(--green-900));border-radius:var(--radius);
+  padding:38px 34px;color:#fff;box-shadow:var(--shadow);
+}
+.about__big{text-align:center;padding-bottom:26px;margin-bottom:26px;border-bottom:1px solid rgba(255,255,255,.18)}
+.about__big .stat__num{font-size:54px;color:#fff}
+.about__big small{display:block;color:rgba(255,255,255,.75);font-size:14px;margin-top:4px}
+.about__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.about__grid div{background:rgba(255,255,255,.08);border-radius:var(--radius-sm);padding:16px}
+.about__grid b{display:block;color:#fff;font-size:15px;margin-bottom:3px}
+.about__grid span{color:rgba(255,255,255,.7);font-size:13px}
+
+/* ---------- 流程 ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{text-align:center;padding:30px 22px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);position:relative;transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.step__num{
+  display:inline-block;font-size:30px;font-weight:900;color:transparent;
+  background:linear-gradient(120deg,var(--green-500),var(--gold-500));-webkit-background-clip:text;background-clip:text;
+  margin-bottom:8px;
+}
+.step h3{font-size:18px;margin-bottom:6px}
+.step p{font-size:14px;color:var(--ink-500)}
+
+/* ---------- 新闻 ---------- */
+.ncard{display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .3s,box-shadow .3s}
+.ncard:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.ncard__date{flex:0 0 auto;text-align:center;border-right:1px solid var(--line);padding-right:18px}
+.ncard__date b{display:block;font-size:30px;font-weight:900;color:var(--green-700);line-height:1}
+.ncard__date span{font-size:12px;color:var(--ink-300)}
+.ncard__cat{display:inline-block;font-size:12px;font-weight:700;color:var(--green-600);background:var(--green-50);padding:3px 10px;border-radius:50px;margin-bottom:8px}
+.ncard__body h3{font-size:16.5px;margin-bottom:8px;transition:color .2s}
+.ncard:hover .ncard__body h3{color:var(--green-700)}
+.ncard__body p{font-size:14px;color:var(--ink-500)}
+
+/* ---------- CTA ---------- */
+.cta{background:linear-gradient(120deg,var(--gold-500),var(--gold-600));padding:64px 0}
+.cta__inner{text-align:center;color:var(--green-900)}
+.cta__inner h2{font-size:clamp(24px,3.5vw,36px);color:#fff;margin-bottom:12px}
+.cta__inner p{color:rgba(255,255,255,.92);font-size:16px;margin-bottom:26px;max-width:600px;margin-left:auto;margin-right:auto}
+
+/* ---------- 页脚 ---------- */
+.footer{background:var(--green-900);color:rgba(255,255,255,.7)}
+.footer__top{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.3fr;gap:40px;padding:62px 24px 48px}
+.brand--footer .brand__text strong{color:#fff}
+.brand--footer .brand__text small{color:rgba(255,255,255,.45)}
+.footer__desc{margin-top:16px;font-size:14px;line-height:1.8}
+.footer h4{color:#fff;font-size:16px;margin-bottom:18px}
+.footer__links a{display:block;font-size:14px;margin-bottom:11px;color:rgba(255,255,255,.7);transition:color .2s,padding .2s}
+.footer__links a:hover{color:var(--gold-500);padding-left:5px}
+.footer__contact p{font-size:14px;margin-bottom:11px}
+.footer__form input,.footer__form textarea{
+  width:100%;padding:11px 14px;margin-bottom:10px;border-radius:10px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);color:#fff;font-family:inherit;font-size:14px;transition:border-color .2s,background .2s;
+}
+.footer__form input::placeholder,.footer__form textarea::placeholder{color:rgba(255,255,255,.4)}
+.footer__form input:focus,.footer__form textarea:focus{outline:none;border-color:var(--green-300);background:rgba(255,255,255,.1)}
+.footer__formhint{font-size:13px;margin-top:8px;min-height:18px}
+.footer__formhint.ok{color:var(--green-300)}
+.footer__formhint.err{color:#ff9b8a}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.1)}
+.footer__bottom-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:20px 24px;font-size:13px;color:rgba(255,255,255,.5)}
+
+/* ---------- 返回顶部 ---------- */
+.backtop{
+  position:fixed;right:26px;bottom:26px;width:46px;height:46px;border-radius:50%;z-index:90;
+  background:linear-gradient(135deg,var(--green-600),var(--green-800));color:#fff;font-size:20px;
+  display:grid;place-items:center;box-shadow:var(--shadow);opacity:0;visibility:hidden;
+  transform:translateY(12px);transition:.3s;
+}
+.backtop.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+.backtop:hover{transform:translateY(-3px)}
+
+/* ---------- 滚动显现动画 ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-in{opacity:1;transform:none}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .grid--services,.grid--gov,.grid--news{grid-template-columns:repeat(2,1fr)}
+  .grid--products{grid-template-columns:repeat(2,1fr)}
+  .platform__inner,.about__inner{grid-template-columns:1fr;gap:40px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .footer__top{grid-template-columns:1fr 1fr}
+  .hero__art{display:none}
+}
+@media (max-width:768px){
+  .nav{
+    position:fixed;top:110px;left:16px;right:16px;flex-direction:column;align-items:stretch;gap:4px;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px;
+    box-shadow:var(--shadow-lg);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.28s;
+  }
+  .nav.is-open{transform:none;opacity:1;visibility:visible}
+  .nav__link{padding:12px 14px}
+  .nav__link::after{display:none}
+  .nav__btn{margin-left:0;text-align:center}
+  .nav-toggle{display:flex}
+  .hero__stats{grid-template-columns:repeat(2,1fr)}
+  .section{padding:64px 0}
+  .section__head{margin-bottom:38px}
+  .trust__inner{justify-content:center;text-align:center}
+}
+@media (max-width:560px){
+  .grid--services,.grid--gov,.grid--products,.grid--news,.steps,.footer__top{grid-template-columns:1fr}
+  .topbar__item--hl{display:none}
+  .hero__inner{padding:56px 24px 100px}
+  .ncard{flex-direction:column;gap:12px}
+  .ncard__date{display:flex;gap:10px;align-items:baseline;border-right:none;padding-right:0}
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ===================== 顶部公告条 ===================== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span class="topbar__item">📞 服务热线：400-888-XXXX</span>
+      <span class="topbar__sep">|</span>
+      <span class="topbar__item">📍 黑龙江·哈尔滨</span>
+      <span class="topbar__spacer"></span>
+      <span class="topbar__item topbar__item--hl">国家级农业社会化服务示范主体</span>
+    </div>
+  </div>
+
+  <!-- ===================== 导航栏 ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="brand" aria-label="获客农业首页">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40">
+            <defs>
+              <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3ea35a"/>
+                <stop offset="1" stop-color="#15703a"/>
+              </linearGradient>
+            </defs>
+            <circle cx="24" cy="24" r="22" fill="url(#leafGrad)"/>
+            <path d="M24 38c0-9 5-16 13-19-1 10-6 17-13 19z" fill="#fff" opacity="0.95"/>
+            <path d="M24 38c0-7-4-12-10-14 1 8 4 13 10 14z" fill="#cdeccf" opacity="0.9"/>
+            <path d="M24 38V20" stroke="#0f5028" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong>获客农业</strong>
+          <small>HUOKE AGRICULTURE</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#hero" class="nav__link">首页</a>
+        <a href="#services" class="nav__link">业务板块</a>
+        <a href="#gov" class="nav__link">政府项目</a>
+        <a href="#platform" class="nav__link">农药平台</a>
+        <a href="#products" class="nav__link">植保种业</a>
+        <a href="#about" class="nav__link">关于我们</a>
+        <a href="#news" class="nav__link">新闻资讯</a>
+        <a href="#contact" class="nav__btn">联系我们</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===================== 首屏 Hero ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__field"></div>
+      <svg class="hero__art" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
+        <!-- 天空渐变 -->
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#bfe6c9"/>
+            <stop offset="1" stop-color="#eaf7ee"/>
+          </linearGradient>
+        </defs>
+        <!-- 飞防无人机 -->
+        <g class="drone">
+          <ellipse cx="300" cy="92" rx="46" ry="9" fill="#0f5028" opacity="0.15"/>
+          <rect x="284" y="70" width="32" height="14" rx="6" fill="#15703a"/>
+          <rect x="276" y="66" width="48" height="5" rx="2.5" fill="#0f5028"/>
+          <circle cx="276" cy="68" r="9" fill="#3ea35a" opacity="0.5"/>
+          <circle cx="324" cy="68" r="9" fill="#3ea35a" opacity="0.5"/>
+          <line x1="300" y1="84" x2="290" y2="98" stroke="#7fc98f" stroke-width="1.4"/>
+          <line x1="300" y1="84" x2="310" y2="98" stroke="#7fc98f" stroke-width="1.4"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__badge">国家级农业社会化服务 · 数字农资平台</span>
+        <h1 class="hero__title">
+          科技赋能现代农业<br>
+          <span class="hero__title-hl">服务惠及亿万三农</span>
+        </h1>
+        <p class="hero__desc">
+          黑龙江省获客农业科技股份有限公司,以农业社会化服务为核心,深耕统防统治、
+          一喷多促等政府项目,构建数字化农药平台,贯通植保药剂、种业全产业链,
+          做农民身边可信赖的农业服务专家。
+        </p>
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--primary">了解业务板块</a>
+          <a href="#contact" class="btn btn--ghost">合作咨询 →</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num" data-target="320" data-suffix="万亩">0</span>
+            <span class="stat__label">累计服务面积</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-target="56" data-suffix="个">0</span>
+            <span class="stat__label">覆盖县区</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-target="12000" data-suffix="+">0</span>
+            <span class="stat__label">合作农户</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-target="98" data-suffix="%">0</span>
+            <span class="stat__label">客户满意度</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C240,80 480,0 720,32 C960,64 1200,16 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ===================== 信任栏 ===================== -->
+  <section class="trust">
+    <div class="container trust__inner">
+      <p class="trust__lead">紧跟国家乡村振兴战略,对标行业头部企业服务标准</p>
+      <div class="trust__logos">
+        <span class="trust__logo">中化农业</span>
+        <span class="trust__logo">北大荒</span>
+        <span class="trust__logo">先正达</span>
+        <span class="trust__logo">中农立华</span>
+        <span class="trust__logo">省农业农村厅</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 业务板块 Services ===================== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">BUSINESS · 业务板块</span>
+        <h2 class="section__title">全产业链农业服务体系</h2>
+        <p class="section__sub">从土地到餐桌,从田间到平台,提供一体化解决方案</p>
+      </div>
+
+      <div class="grid grid--services">
+        <article class="scard reveal">
+          <div class="scard__icon scard__icon--green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg>
+          </div>
+          <h3 class="scard__title">农业社会化服务</h3>
+          <p class="scard__text">耕、种、防、收全程托管,为新型经营主体与小农户提供专业化、规模化生产服务。</p>
+        </article>
+
+        <article class="scard reveal">
+          <div class="scard__icon scard__icon--blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l9 4-9 4-9-4 9-4zM3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
+          </div>
+          <h3 class="scard__title">农业技术培训</h3>
+          <p class="scard__text">承接高素质农民培育工程,组织田间课堂与线上课程,培养懂技术、会经营的新农人。</p>
+        </article>
+
+        <article class="scard reveal">
+          <div class="scard__icon scard__icon--gold">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v6M12 22v-6M2 12h6M22 12h-6"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3 class="scard__title">统防统治</h3>
+          <p class="scard__text">专业化飞防队伍与地面机械协同作业,统一时间、统一药剂、统一防控,提升防治效果。</p>
+        </article>
+
+        <article class="scard reveal">
+          <div class="scard__icon scard__icon--green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-12V5l-8-3-8 3v5c0 8 8 12 8 12z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="scard__title">一喷多促</h3>
+          <p class="scard__text">承接政府"一喷多促"惠农项目,科学配方一次喷施,实现防病虫、防早衰、促灌浆增产。</p>
+        </article>
+
+        <article class="scard reveal">
+          <div class="scard__icon scard__icon--blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 14h3"/></svg>
+          </div>
+          <h3 class="scard__title">数字农药平台</h3>
+          <p class="scard__text">线上农资交易与服务平台,正品溯源、精准配药、订单直达,打通农资流通"最后一公里"。</p>
+        </article>
+
+        <article class="scard reveal">
+          <div class="scard__icon scard__icon--gold">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 6 6 9 6 13a6 6 0 0012 0c0-4-2-7-6-11z"/></svg>
+          </div>
+          <h3 class="scard__title">植保药剂 · 种业</h3>
+          <p class="scard__text">优选高效低毒药剂与优良品种,提供测土配方与品种推荐,保障作物从种到收的健康成长。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 政府项目 ===================== -->
+  <section class="section gov" id="gov">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow section__eyebrow--light">GOVERNMENT · 政府项目</span>
+        <h2 class="section__title section__title--light">承接惠农政策 落地为民服务</h2>
+        <p class="section__sub section__sub--light">作为政府农业项目的可靠实施主体,守护粮食安全</p>
+      </div>
+
+      <div class="grid grid--gov">
+        <div class="govcard reveal">
+          <span class="govcard__tag">统防统治</span>
+          <h3 class="govcard__title">重大病虫害专业化统防统治</h3>
+          <p class="govcard__text">组建标准化飞防服务队,承接草地贪夜蛾、稻瘟病等监测与应急防控,作业面积逐年扩大。</p>
+          <ul class="govcard__list">
+            <li>统一组织 · 统一标准 · 统一作业</li>
+            <li>政府采购 · 财政补贴项目落地</li>
+          </ul>
+        </div>
+        <div class="govcard reveal">
+          <span class="govcard__tag">一喷多促</span>
+          <h3 class="govcard__title">大豆玉米"一喷多促"项目</h3>
+          <p class="govcard__text">配合稳产增产行动,科学制定配方,一次作业实现多重功效,助力粮食单产提升。</p>
+          <ul class="govcard__list">
+            <li>科学配方 · 一喷多效</li>
+            <li>覆盖大豆、玉米、水稻主产区</li>
+          </ul>
+        </div>
+        <div class="govcard reveal">
+          <span class="govcard__tag">高素质农民</span>
+          <h3 class="govcard__title">高素质农民培育工程</h3>
+          <p class="govcard__text">承接农业农村部门培训任务,开展专业技能与经营管理培训,培育乡村振兴带头人。</p>
+          <ul class="govcard__list">
+            <li>理论 + 实训 + 跟踪指导</li>
+            <li>累计培训学员上万人次</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 农药平台 ===================== -->
+  <section class="section platform" id="platform">
+    <div class="container platform__inner">
+      <div class="platform__media reveal">
+        <div class="mockup">
+          <div class="mockup__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup__screen">
+            <div class="mockup__top">
+              <span class="mockup__logo">获客农资·云平台</span>
+              <span class="mockup__pill">正品溯源</span>
+            </div>
+            <div class="mockup__row">
+              <div class="mockup__tile">测土配方</div>
+              <div class="mockup__tile">在线下单</div>
+              <div class="mockup__tile">飞防预约</div>
+              <div class="mockup__tile">专家问诊</div>
+            </div>
+            <div class="mockup__chart">
+              <span style="height:40%"></span>
+              <span style="height:65%"></span>
+              <span style="height:50%"></span>
+              <span style="height:80%"></span>
+              <span style="height:70%"></span>
+              <span style="height:95%"></span>
+            </div>
+            <div class="mockup__note">本月订单同比增长 <strong>32%</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="platform__content reveal">
+        <span class="section__eyebrow">PLATFORM · 数字农资平台</span>
+        <h2 class="section__title">一个平台,管好一季农事</h2>
+        <p class="platform__desc">
+          整合农资供应链与社会化服务能力,以数字化手段连接厂家、经销商、服务队与农户,
+          让买药更放心、用药更科学、服务更高效。
+        </p>
+        <ul class="feature-list">
+          <li><span class="feature-list__dot"></span><div><strong>正品溯源</strong>每一件农资可查可追,杜绝假冒伪劣。</div></li>
+          <li><span class="feature-list__dot"></span><div><strong>精准配药</strong>结合作物、病虫情智能推荐用药方案。</div></li>
+          <li><span class="feature-list__dot"></span><div><strong>服务预约</strong>飞防、托管、培训一键下单,进度可视。</div></li>
+          <li><span class="feature-list__dot"></span><div><strong>专家在线</strong>植保专家远程问诊,问题快速响应。</div></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary">预约平台演示</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 植保种业 Products ===================== -->
+  <section class="section products" id="products">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">PRODUCTS · 植保与种业</span>
+        <h2 class="section__title">优选好药 · 优良好种</h2>
+        <p class="section__sub">严选合规供应链,为高产丰收筑牢第一道防线</p>
+      </div>
+
+      <div class="grid grid--products">
+        <article class="pcard reveal">
+          <div class="pcard__cover pcard__cover--1"><span>杀菌剂</span></div>
+          <div class="pcard__body">
+            <h3>植保药剂</h3>
+            <p>杀虫剂、杀菌剂、除草剂、植物生长调节剂等,品类齐全,高效低残留。</p>
+          </div>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard__cover pcard__cover--2"><span>良种</span></div>
+          <div class="pcard__body">
+            <h3>优良种业</h3>
+            <p>大豆、玉米、水稻等主粮优质品种,适配黑土地气候,稳产抗逆。</p>
+          </div>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard__cover pcard__cover--3"><span>配方</span></div>
+          <div class="pcard__body">
+            <h3>测土配方肥</h3>
+            <p>因地施肥、因作物配方,提升肥料利用率,减肥增效更环保。</p>
+          </div>
+        </article>
+        <article class="pcard reveal">
+          <div class="pcard__cover pcard__cover--4"><span>装备</span></div>
+          <div class="pcard__body">
+            <h3>植保装备</h3>
+            <p>植保无人机、自走式喷杆喷雾机等智能农机装备供应与运维。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 关于我们 ===================== -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__content reveal">
+        <span class="section__eyebrow">ABOUT · 关于我们</span>
+        <h2 class="section__title">扎根黑土地的农业服务专家</h2>
+        <p class="about__text">
+          黑龙江省获客农业科技股份有限公司立足农业大省资源禀赋,以"科技兴农、服务为民"为宗旨,
+          构建集农业社会化服务、政府项目实施、数字农资平台、植保种业供应于一体的综合服务体系。
+        </p>
+        <p class="about__text">
+          公司拥有专业化飞防队伍、技术服务团队与农技专家,常年承接统防统治、一喷多促、
+          高素质农民培育等政府惠农项目,致力于让现代农业技术真正走进田间地头。
+        </p>
+        <div class="about__values">
+          <div class="value"><strong>使命</strong><span>科技赋能农业 服务惠及三农</span></div>
+          <div class="value"><strong>愿景</strong><span>成为值得信赖的农业综合服务商</span></div>
+          <div class="value"><strong>价值观</strong><span>专业 · 诚信 · 高效 · 共赢</span></div>
+        </div>
+      </div>
+      <div class="about__media reveal">
+        <div class="about__panel">
+          <div class="about__big"><span class="stat__num" data-target="10" data-suffix="年+">0</span><small>深耕农业服务</small></div>
+          <div class="about__grid">
+            <div><b>专业飞防队</b><span>规模化作业</span></div>
+            <div><b>农技专家团</b><span>全程指导</span></div>
+            <div><b>合规供应链</b><span>正品保障</span></div>
+            <div><b>数字平台</b><span>高效协同</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 服务流程 ===================== -->
+  <section class="section process">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">PROCESS · 服务流程</span>
+        <h2 class="section__title">四步开启专业农业服务</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span class="step__num">01</span><h3>需求沟通</h3><p>了解地块、作物与服务需求</p></div>
+        <div class="step reveal"><span class="step__num">02</span><h3>方案定制</h3><p>测土配方与作业方案设计</p></div>
+        <div class="step reveal"><span class="step__num">03</span><h3>专业作业</h3><p>统一组织标准化田间作业</p></div>
+        <div class="step reveal"><span class="step__num">04</span><h3>跟踪服务</h3><p>效果回访与全程技术指导</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 新闻资讯 ===================== -->
+  <section class="section news" id="news">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__eyebrow">NEWS · 新闻资讯</span>
+        <h2 class="section__title">行业动态与公司新闻</h2>
+      </div>
+      <div class="grid grid--news">
+        <article class="ncard reveal">
+          <div class="ncard__date"><b>26</b><span>2026.05</span></div>
+          <div class="ncard__body">
+            <span class="ncard__cat">政府项目</span>
+            <h3>公司中标多地"一喷多促"惠农项目</h3>
+            <p>凭借专业飞防能力与服务口碑,公司成功承接多个区县大豆玉米一喷多促作业任务。</p>
+          </div>
+        </article>
+        <article class="ncard reveal">
+          <div class="ncard__date"><b>18</b><span>2026.05</span></div>
+          <div class="ncard__body">
+            <span class="ncard__cat">平台动态</span>
+            <h3>数字农资平台正品溯源功能上线</h3>
+            <p>用户可扫码查询农资来源与流向,购药用药更加安心透明。</p>
+          </div>
+        </article>
+        <article class="ncard reveal">
+          <div class="ncard__date"><b>09</b><span>2026.05</span></div>
+          <div class="ncard__body">
+            <span class="ncard__cat">技术培训</span>
+            <h3>高素质农民培训班顺利开班</h3>
+            <p>田间课堂与线上学习相结合,助力农户掌握科学种植与绿色防控技术。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta">
+    <div class="container cta__inner reveal">
+      <h2>需要农业社会化服务?</h2>
+      <p>无论是统防统治、一喷多促,还是农资采购与技术培训,我们都能为您提供专业方案。</p>
+      <a href="#contact" class="btn btn--light">立即咨询合作</a>
+    </div>
+  </section>
+
+  <!-- ===================== 联系我们 / 页脚 ===================== -->
+  <footer class="footer" id="contact">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <div class="brand brand--footer">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" width="36" height="36">
+              <circle cx="24" cy="24" r="22" fill="url(#leafGrad)"/>
+              <path d="M24 38c0-9 5-16 13-19-1 10-6 17-13 19z" fill="#fff" opacity="0.95"/>
+              <path d="M24 38c0-7-4-12-10-14 1 8 4 13 10 14z" fill="#cdeccf" opacity="0.9"/>
+            </svg>
+          </span>
+          <span class="brand__text"><strong>获客农业</strong><small>HUOKE AGRICULTURE</small></span>
+        </div>
+        <p class="footer__desc">黑龙江省获客农业科技股份有限公司<br>科技赋能农业 · 服务惠及三农</p>
+      </div>
+
+      <div class="footer__links">
+        <h4>业务板块</h4>
+        <a href="#services">农业社会化服务</a>
+        <a href="#gov">统防统治 / 一喷多促</a>
+        <a href="#platform">数字农药平台</a>
+        <a href="#products">植保药剂 · 种业</a>
+      </div>
+
+      <div class="footer__contact">
+        <h4>联系我们</h4>
+        <p>📍 黑龙江省哈尔滨市 · 获客农业大厦</p>
+        <p>📞 服务热线：400-888-XXXX</p>
+        <p>✉️ 邮箱：service@huoke-agri.com</p>
+        <p>🕐 工作时间：周一至周六 8:30 - 17:30</p>
+      </div>
+
+      <div class="footer__form">
+        <h4>留言咨询</h4>
+        <form id="contactForm" novalidate>
+          <input type="text" name="name" placeholder="您的姓名" required>
+          <input type="tel" name="phone" placeholder="联系电话" required>
+          <textarea name="msg" rows="3" placeholder="请简要描述您的需求"></textarea>
+          <button type="submit" class="btn btn--primary btn--block">提交咨询</button>
+          <p class="footer__formhint" id="formHint"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span>© 2026 黑龙江省获客农业科技股份有限公司 版权所有</span>
+        <span>黑ICP备 XXXXXXXX 号 · 本站为前端演示页面</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="backtop" id="backTop" aria-label="返回顶部">↑</a>
+
+  <script>
+/* =========================================================
+   获客农业 · 交互脚本
+   ========================================================= */
+(function () {
+  'use strict';
+
+  const header = document.getElementById('header');
+  const nav = document.getElementById('nav');
+  const navToggle = document.getElementById('navToggle');
+  const backTop = document.getElementById('backTop');
+
+  /* ---------- 导航栏滚动阴影 + 返回顶部 ---------- */
+  function onScroll() {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 10);
+    backTop.classList.toggle('is-visible', y > 500);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- 移动端菜单 ---------- */
+  navToggle.addEventListener('click', function () {
+    const open = nav.classList.toggle('is-open');
+    navToggle.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  });
+  // 点击菜单项后收起
+  nav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      nav.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- 滚动显现动画 ---------- */
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          // 同组元素轻微错峰
+          const delay = (entry.target.dataset.delay || (i % 4) * 80);
+          setTimeout(function () { entry.target.classList.add('is-in'); }, delay);
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('is-in'); });
+  }
+
+  /* ---------- 数字滚动动画 ---------- */
+  function animateCount(el) {
+    const target = parseFloat(el.dataset.target) || 0;
+    const suffix = el.dataset.suffix || '';
+    const dur = 1500;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+      const val = Math.floor(eased * target);
+      el.textContent = val.toLocaleString('en-US') + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target.toLocaleString('en-US') + suffix;
+    }
+    requestAnimationFrame(tick);
+  }
+  const numEls = document.querySelectorAll('.stat__num[data-target]');
+  if ('IntersectionObserver' in window) {
+    const numIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          numIO.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    numEls.forEach(function (el) { numIO.observe(el); });
+  } else {
+    numEls.forEach(animateCount);
+  }
+
+  /* ---------- 导航高亮当前区块 ---------- */
+  const sections = ['hero', 'services', 'gov', 'platform', 'products', 'about', 'news']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  const linkMap = {};
+  document.querySelectorAll('.nav__link').forEach(function (a) {
+    const id = a.getAttribute('href').slice(1);
+    linkMap[id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    const navIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          Object.values(linkMap).forEach(function (l) { l.classList.remove('is-active'); });
+          const link = linkMap[entry.target.id];
+          if (link) link.classList.add('is-active');
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(function (s) { navIO.observe(s); });
+  }
+
+  /* ---------- 留言表单校验 ---------- */
+  const form = document.getElementById('contactForm');
+  const hint = document.getElementById('formHint');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = form.elements['name'].value.trim();
+      const phone = form.elements['phone'].value.trim();
+      const phoneOk = /^1[3-9]\d{9}$/.test(phone) || /^0\d{2,3}-?\d{7,8}$/.test(phone);
+
+      if (!name) {
+        hint.textContent = '请填写您的姓名';
+        hint.className = 'footer__formhint err';
+        return;
+      }
+      if (!phoneOk) {
+        hint.textContent = '请输入有效的联系电话';
+        hint.className = 'footer__formhint err';
+        return;
+      }
+      hint.textContent = '提交成功！我们将尽快与您联系。（演示页面,未实际发送）';
+      hint.className = 'footer__formhint ok';
+      form.reset();
+    });
+  }
+
+  /* ---------- 年份自动更新（页脚） ---------- */
+  // 保留静态文案,如需动态可在此扩展
+})();
+
+</script>
+</body>
+</html>
